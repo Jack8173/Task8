@@ -15,10 +15,13 @@ namespace Task7
             int waitingHours;
             int waitingMinutes;
             int minutesInHour = 60;
-            Console.WriteLine("Количество бабушка: ");
+            int timeWait;
+            
+            Console.WriteLine("Количество бабушек: ");
             numberOfGrandmothers = Convert.ToInt32(Console.ReadLine());
-            waitingHours = (numberOfGrandmothers * receptionTime) / minutesInHour;
-            waitingMinutes = (numberOfGrandmothers * receptionTime) % minutesInHour;
+            timeWait = numberOfGrandmothers * receptionTime;
+            waitingHours = timeWait / minutesInHour;
+            waitingMinutes = timeWait % minutesInHour;
             Console.WriteLine($"Ваше время ожидания {waitingHours} часa, {waitingMinutes} минут ");
             Console.ReadKey();
         }
