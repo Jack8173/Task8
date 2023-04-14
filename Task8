@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+
+namespace Task7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numberOfGrandmothers;
+            int receptionTime = 10;
+            int waitingHours;
+            int waitingMinutes;
+            int minutesInHour = 60;
+            Console.WriteLine("Количество бабушка: ");
+            numberOfGrandmothers = Convert.ToInt32(Console.ReadLine());
+            waitingHours = (numberOfGrandmothers * receptionTime) / minutesInHour;
+            waitingMinutes = (numberOfGrandmothers * receptionTime) % minutesInHour;
+            Console.WriteLine($"Ваше время ожидания {waitingHours} часa, {waitingMinutes} минут ");
+            Console.ReadKey();
+        }
+    }
+}
